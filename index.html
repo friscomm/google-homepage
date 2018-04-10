@@ -1,14 +1,55 @@
 <html>
   <head>
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png"/>
+    <title>Google</title>
     <style>
-      #navbar {
-
+      body {
+        font-family: arial, sans-serif;
       }
-
+      #navbar {
+        display: inline-block;
+      }
 
       .navbar-item {
         color: blue;
         display: inline-block;
+        font-size: 13px;
+        padding: 0px 10px;
+      }
+
+      .left-navbar-group {
+        padding: 10px;
+      }
+
+      .right-navbar-group {
+        padding: 10px;
+      }
+
+      .search-buttons {
+        width: 120px;
+        padding: 0px 16px;
+      }
+
+      #button-group {
+        margin: auto;
+        width: 50%;
+      }
+
+      #image-container {
+
+      }
+
+      #google-image {
+        padding-top: 109px;
+        width: 272px;
+      }
+
+      #google-apps {
+        width: 15px;
+      }
+
+      #alarm-icon{
+        width: 22px;
       }
     </style>
   </head>
@@ -23,13 +64,19 @@
       <div class='right-navbar-group'>
         <div class='navbar-item'>Gmail</div>
         <div class='navbar-item'>Images</div>
-        <div class='navbar-item'></div>
-        <div class='navbar-item'></div>
+        <div class='navbar-item'><img id='google-apps' src='https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2Fflatfrogblog.com%2Fwp-content%2Fuploads%2F2014%2F01%2Fapp-launcher-150x150.png&container=blogger&gadget=a&rewriteMime=image%2F*'/></div>
+        <div class='navbar-item'>
+          <img id='alarm-icon' src='https://cdn1.iconfinder.com/data/icons/rounded-black-basic-ui/139/Notification-RoundedBlack-128.png' />
+        </div>
         <div class='navbar-item'></div>
       </div>
     </div>
-    <div id='google-image'></div>
-    <div id='google-search'></div>
+    <div id='image-container'>
+      <img id='google-image' src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'/>
+    </div>
+    <div id='google-search'>
+      <input type='text' />
+    </div>
     <div id='button-group'>
       <button class='search-buttons'>Google Search</button>
       <button class='search-buttons'>I'm Feeling Lucky</button>
