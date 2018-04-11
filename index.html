@@ -6,42 +6,77 @@
       body {
         font-family: arial, sans-serif;
       }
+      a:link {
+        text-decoration: none;
+        color: rgba(0,0,0,0.87);
+      }
+      a:hover {
+        text-decoration: underline;
+      }
       #navbar {
         display: inline-block;
       }
 
       .navbar-item {
-        color: blue;
         display: inline-block;
         font-size: 13px;
         padding: 0px 10px;
       }
 
       .left-navbar-group {
-        padding: 10px;
+        padding: 0px 10px;
+        position: fixed;
       }
 
       .right-navbar-group {
-        padding: 10px;
+        padding: 0px 10px;
+        position: fixed;
+        right: 20px;
       }
 
       .search-buttons {
-        width: 120px;
-        padding: 0px 16px;
+        width: 140px;
+        height: 40px;
+        padding: 0px 10px;
+        margin: 0px 5px;
+        background-color: rgb(236, 237, 238);
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        color: rgb(117, 117, 117);
       }
 
       #button-group {
         margin: auto;
-        width: 50%;
+        width: 40%;
+        margin-top: 40px;
+        display: block-inline;
+      }
+
+      button:hover {
+        color: rgb(46, 45, 45);
+        outline: solid 1px rgb(200, 200, 200);
+      }
+
+      #sub-group {
+        width: 75%;
+        margin: auto;
       }
 
       #image-container {
-
+        margin: auto;
+        width: 25%;
       }
 
       #google-image {
-        padding-top: 109px;
+        padding-top: 175px;
+        padding-bottom: 30px;
         width: 272px;
+      }
+
+      input:focus {
+        outline: none;
+        box-shadow: 2px 4px 10px rgb(200, 200, 200);
       }
 
       #google-apps {
@@ -51,19 +86,29 @@
       #alarm-icon{
         width: 22px;
       }
+
+      #google-search {
+        width: 45%;
+        margin: auto;
+      }
+
+      #google-input {
+        width: 100%;
+        height: 50px;
+      }
     </style>
   </head>
   <body>
     <div id='navbar'>
       <div class='left-navbar-group'>
-        <div class='navbar-item'>About</div>
-        <div class='navbar-item'>Store</div>
+        <div class='navbar-item'><a href='#'>About</a></div>
+        <div class='navbar-item'><a href='#'>Store</a></div>
       </div>
     </div>
     <div id='navbar'>
       <div class='right-navbar-group'>
-        <div class='navbar-item'>Gmail</div>
-        <div class='navbar-item'>Images</div>
+        <div class='navbar-item'><a href='#'>Gmail</a></div>
+        <div class='navbar-item'><a href='#'>Images</a></div>
         <div class='navbar-item'><img id='google-apps' src='https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2Fflatfrogblog.com%2Fwp-content%2Fuploads%2F2014%2F01%2Fapp-launcher-150x150.png&container=blogger&gadget=a&rewriteMime=image%2F*'/></div>
         <div class='navbar-item'>
           <img id='alarm-icon' src='https://cdn1.iconfinder.com/data/icons/rounded-black-basic-ui/139/Notification-RoundedBlack-128.png' />
@@ -75,11 +120,13 @@
       <img id='google-image' src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'/>
     </div>
     <div id='google-search'>
-      <input type='text' />
+      <input id='google-input' type='text' />
     </div>
     <div id='button-group'>
-      <button class='search-buttons'>Google Search</button>
-      <button class='search-buttons'>I'm Feeling Lucky</button>
+      <div id='sub-group'>
+        <button class='search-buttons'>Google Search</button>
+        <button class='search-buttons'>I'm Feeling Lucky</button>
+      </div>
     </div>
   </body>
 </html>
